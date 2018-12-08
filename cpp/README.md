@@ -42,7 +42,7 @@ provided configuration file.
 
 ```bash
 # create the conda environment (assuming `pwd` is base `cudf` directory)
-$ conda env create --name cudf_dev --file conda_environments/dev_py35.yml
+$ conda env create --name cudf_dev --file conda/environments/dev_py35.yml
 # activate the environment
 $ source activate cudf_dev
 # when not using default arrow version 0.10.0, run
@@ -56,12 +56,12 @@ More information: the python cffi wrapper code requires `cffi` and `pytest`.
 The testing code requires `numba` and `pandas`. IPC testing requires 
 `distributed`. All of these are installed from the previous commands.
 
-The environment can be updated from `conda_environments/dev_py35.yml` as
+The environment can be updated from `conda/environments/dev_py35.yml` as
 development includes/changes the depedencies. To do so, run:
 
 ```bash
 # Update the conda environment (assuming `pwd` is base `cudf` directory)
-conda env update --name cudf_dev --file conda_environments/dev_py35.yml
+conda env update --name cudf_dev --file conda/environments/dev_py35.yml
 ```
 Note that `dev_py35.yml` uses pyarrow 0.10.0. Reinstall pyarrow if 
 needed using `conda install pyarrow=$ARROW_VERSION -c conda-forge`.
